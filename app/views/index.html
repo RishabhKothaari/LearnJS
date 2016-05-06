@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="learnJS">
+  <head>
+    <meta charset="utf-8">
+    <title>LearnJS</title>
+    <link rel="stylesheet" href="../../bower_components/angular-material/angular-material.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="../../bower_components/material-design-icons/iconfont/material-icons.css" media="screen" title="no title" charset="utf-8">
+    <script type="text/javascript" src="../../bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="../../bower_components/angular-aria/angular-aria.js"></script>
+    <script type="text/javascript" src="../../bower_components/angular-animate/angular-animate.js"></script>
+    <script type="text/javascript" src="../../bower_components/angular-material/angular-material.js"></script>
+    <script type="text/javascript" src="../../bower_components/angular-messages/angular-messages.js"></script>
+    <script type="text/javascript" src="../js/app.js"></script>
+  </head>
+  <body ng-controller="mainController">
+    <div layout="row">
+    <md-toolbar class="md-theme-light">
+      <h2 class="md-toolbar-tools">
+        <span>Welcome to LearnJS - Your JavaScript Tutor</span>
+      </h2>
+    </md-toolbar>
+  </div>
+  <div layout="column">
+    <md-content md-theme="altTheme">
+      <section>
+        <md-subheader class="md-primary">
+          Select an exercise to begin.
+        </md-subheader>
+      </section>
+      <md-list layout-padding>
+        <md-list-item class="md-3-line" ng-repeat="exercise in exercises" ng-click="loadExercise(exercise.code)">
+            <div class="md-list-item-text">
+              <h3>{{exercise.name}}</h3>
+            </div>
+            <i class="material-icons md-24">face</i>
+        </md-list-item>
+      </md-list>
+    </md-content>
+    </div>
+  </body>
+</html>

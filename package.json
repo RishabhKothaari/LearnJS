@@ -1,0 +1,12 @@
+{
+  "name": "LearnJS",
+  "version": "0.0.1",
+  "main": "./main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "electron-prebuilt": "^0.37.8"
+  }
+}
